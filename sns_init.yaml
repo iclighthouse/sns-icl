@@ -563,7 +563,7 @@ Distribution:
     - principal: tfsmw-6p6ie-djofc-bbepz-kl2ms-wxhkn-462ir-skd2n-wwom4-54xb3-jae
       stake: 525_394 tokens
       memo: 38
-      dissolve_delay: 0 months
+      dissolve_delay: 3 months
       vesting_period: 0 months
     - principal: tfsmw-6p6ie-djofc-bbepz-kl2ms-wxhkn-462ir-skd2n-wwom4-54xb3-jae
       stake: 525_394 tokens
