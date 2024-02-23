@@ -89,8 +89,33 @@ NnsProposal:
 
   # The description of the proposal. Must be a string of 10 to 2,000 bytes.
   summary: >
-    # Proposal to create an SNS for the project 'ICLighthouse DAO'.
-    The SNS will be initialized with the following neurons:
+    ## Summary
+    This is the ICLighthouse proposal for the NNS to create an SNS DAO \n
+    ## About
+    ICLighthouse DAO is a community-driven on-chain governance contract initiated on the Internet Computer SNS system by ICLighthouse. It governs ICDex and icRouter. \n
+    ## Proposed Token Distribution
+    Initial Total supply: 210 Million \n
+    Treasury: 36.238% \n
+    Early Investors: 14% \n
+    Team: 15% \n
+    SNS Swap: 30% \n
+    Voting Rewards: 4.762% Will be minted during future governance. \n
+    For more information, please refer to the white paper: https://iclight.house/whitepaper.pdf \n
+    ## Decentralization SNS Swap
+    30% of the total supply of tokens is proposed to be distributed via an SNS decentralization swap. Swap participation parameters: \n
+    Min participation: 1 ICP \n
+    Max participation: 100,000 ICP \n
+    Max to be raised: 600,000 ICP \n
+    Min to be raised: 200,000 ICP \n
+    Minimum number of participants: 100 \n
+    ## Governance
+    Governance The governance model includes staking, voting, and other relevant details. The minimum amount of SNS tokens to stake a neuron is 10. The minimum dissolve delay for a neuron to cast votes on proposals is 1 month and the maxmimum dissolve delay is 2 years. \n
+    ## The Dapps
+    The IClighthouse is composed of multiple canisters with the SNS directly controlling the following canisters: \n
+    - i5jcx-ziaaa-aaaar-qaazq-cai   (ICDex Rooter) \n
+    - 7vkf4-jqaaa-aaaaj-azrua-cai   (ICDex Frontend) \n
+    ## Verification
+    All information about the project can be verified in the whitepaper(https://iclight.house/whitepaper.pdf) and on Github(https://github.com/iclighthouse). \n
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
@@ -331,12 +356,415 @@ Distribution:
     # principals of your intended genesis neurons.
     #
     # For testing, propose_sns.sh will fill this in automatically.
-    # ==========testing===========
-    - principal: rl7h3-hpj4y-2ytmr-5kzr7-ilqj5-h5cwd-om42h-skjcj-f6toi-3oxo2-gae
-      stake: 60_900_000 tokens
+
+    # =======team 0-9=======
+    - principal: w6uxv-phwzk-nyfuk-e2s4f-lxot4-fysux-qif6a-kd6m2-mxidg-5qmk7-eae
+      stake: 1_000 tokens
       memo: 0
+      dissolve_delay: 3 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_499_000 tokens
+      memo: 1
+      dissolve_delay: 0 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 2
+      dissolve_delay: 3 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 3
+      dissolve_delay: 6 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 4
+      dissolve_delay: 9 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 5
+      dissolve_delay: 12 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 6
+      dissolve_delay: 15 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 7
+      dissolve_delay: 18 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 8
+      dissolve_delay: 21 months
+      vesting_period: 6 months
+    - principal: zseoz-qqaaa-aaaap-abzxa-cai
+      stake: 3_500_000 tokens
+      memo: 9
       dissolve_delay: 2 years
-      vesting_period: 0 years
+      vesting_period: 6 months
+
+    # =======Seed round=======
+    # seed investor1 10-12
+    - principal: ljxsi-5du4w-3se32-vba6v-dd543-rrj3g-nayx2-f7xhd-o4u7a-ycmxw-bae
+      stake: 877_193 tokens
+      memo: 10
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: ljxsi-5du4w-3se32-vba6v-dd543-rrj3g-nayx2-f7xhd-o4u7a-ycmxw-bae
+      stake: 877_193 tokens
+      memo: 11
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: ljxsi-5du4w-3se32-vba6v-dd543-rrj3g-nayx2-f7xhd-o4u7a-ycmxw-bae
+      stake: 877_193 tokens
+      memo: 12
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor2 13-15
+    - principal: sr3xw-uaoqw-zuwmi-56mmd-y6oqi-ssjeu-ottqw-4zm47-edbim-djnqs-4qe
+      stake: 175_439 tokens
+      memo: 13
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: sr3xw-uaoqw-zuwmi-56mmd-y6oqi-ssjeu-ottqw-4zm47-edbim-djnqs-4qe
+      stake: 175_439 tokens
+      memo: 14
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: sr3xw-uaoqw-zuwmi-56mmd-y6oqi-ssjeu-ottqw-4zm47-edbim-djnqs-4qe
+      stake: 175_438 tokens
+      memo: 15
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor3 16-18
+    - principal: rynug-iwmwd-igvnb-4stsd-aogqr-kkjza-5mwoj-5hvat-ue4t5-njfag-kqe
+      stake: 584_796 tokens
+      memo: 16
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: rynug-iwmwd-igvnb-4stsd-aogqr-kkjza-5mwoj-5hvat-ue4t5-njfag-kqe
+      stake: 584_795 tokens
+      memo: 17
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: rynug-iwmwd-igvnb-4stsd-aogqr-kkjza-5mwoj-5hvat-ue4t5-njfag-kqe
+      stake: 584_795 tokens
+      memo: 18
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor4 19-21
+    - principal: ljaqo-bhkgi-cgnne-5l5ng-fgrqk-u473a-n56zh-ktxai-7nfk6-epiu2-wqe
+      stake: 526_316 tokens
+      memo: 19
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: ljaqo-bhkgi-cgnne-5l5ng-fgrqk-u473a-n56zh-ktxai-7nfk6-epiu2-wqe
+      stake: 526_316 tokens
+      memo: 20
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: ljaqo-bhkgi-cgnne-5l5ng-fgrqk-u473a-n56zh-ktxai-7nfk6-epiu2-wqe
+      stake: 526_315 tokens
+      memo: 21
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor5 22-24
+    - principal: 4bqld-ninlj-m2kdb-o36pi-mgdnq-tvojd-gw56u-zzae6-5ubnf-isvia-sqe
+      stake: 291_886 tokens
+      memo: 22
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: 4bqld-ninlj-m2kdb-o36pi-mgdnq-tvojd-gw56u-zzae6-5ubnf-isvia-sqe
+      stake: 291_885 tokens
+      memo: 23
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: 4bqld-ninlj-m2kdb-o36pi-mgdnq-tvojd-gw56u-zzae6-5ubnf-isvia-sqe
+      stake: 291_885 tokens
+      memo: 24
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor6 25-27
+    - principal: m3d54-swmqm-i7xxj-5tmqk-dgqhw-zkqdq-7wz3b-wnqoc-drqth-pteir-cae
+      stake: 437_829 tokens
+      memo: 25
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: m3d54-swmqm-i7xxj-5tmqk-dgqhw-zkqdq-7wz3b-wnqoc-drqth-pteir-cae
+      stake: 437_828 tokens
+      memo: 26
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: m3d54-swmqm-i7xxj-5tmqk-dgqhw-zkqdq-7wz3b-wnqoc-drqth-pteir-cae
+      stake: 437_828 tokens
+      memo: 27
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor7 28-30
+    - principal: cnsg6-zppe7-frbxe-gylmd-22bs3-o2ngn-bhfwf-mqjis-ntwoa-trsj6-5ae
+      stake: 350_263 tokens
+      memo: 28
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: cnsg6-zppe7-frbxe-gylmd-22bs3-o2ngn-bhfwf-mqjis-ntwoa-trsj6-5ae
+      stake: 350_263 tokens
+      memo: 29
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: cnsg6-zppe7-frbxe-gylmd-22bs3-o2ngn-bhfwf-mqjis-ntwoa-trsj6-5ae
+      stake: 350_262 tokens
+      memo: 30
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor8 31-33
+    - principal: sfnjn-mhpjp-vu3em-cqln3-fjxqn-ivogx-vgx63-czl4g-xpfzn-4p4lx-xae
+      stake: 634_682 tokens
+      memo: 31
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: sfnjn-mhpjp-vu3em-cqln3-fjxqn-ivogx-vgx63-czl4g-xpfzn-4p4lx-xae
+      stake: 634_682 tokens
+      memo: 32
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: sfnjn-mhpjp-vu3em-cqln3-fjxqn-ivogx-vgx63-czl4g-xpfzn-4p4lx-xae
+      stake: 634_681 tokens
+      memo: 33
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor9 34-36
+    - principal: dzpoh-oukvr-rjxhb-wt4fs-twzvu-hd3x7-6hr7d-olmry-hwpm7-vri2q-4qe
+      stake: 496_206 tokens
+      memo: 34
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: dzpoh-oukvr-rjxhb-wt4fs-twzvu-hd3x7-6hr7d-olmry-hwpm7-vri2q-4qe
+      stake: 496_205 tokens
+      memo: 35
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: dzpoh-oukvr-rjxhb-wt4fs-twzvu-hd3x7-6hr7d-olmry-hwpm7-vri2q-4qe
+      stake: 496_205 tokens
+      memo: 36
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # seed investor10 37-39
+    - principal: tfsmw-6p6ie-djofc-bbepz-kl2ms-wxhkn-462ir-skd2n-wwom4-54xb3-jae
+      stake: 525_394 tokens
+      memo: 37
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: tfsmw-6p6ie-djofc-bbepz-kl2ms-wxhkn-462ir-skd2n-wwom4-54xb3-jae
+      stake: 525_394 tokens
+      memo: 38
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: tfsmw-6p6ie-djofc-bbepz-kl2ms-wxhkn-462ir-skd2n-wwom4-54xb3-jae
+      stake: 525_394 tokens
+      memo: 39
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+
+    # Early contributors & donors
+    # early investor1 40-42
+    - principal: yyfd5-sbfbu-cbuoy-f5w65-7xidr-4soe3-k2p2g-riv7u-ldg7t-fxz3z-vae
+      stake: 33_334 tokens
+      memo: 40
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: yyfd5-sbfbu-cbuoy-f5w65-7xidr-4soe3-k2p2g-riv7u-ldg7t-fxz3z-vae
+      stake: 33_333 tokens
+      memo: 41
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: yyfd5-sbfbu-cbuoy-f5w65-7xidr-4soe3-k2p2g-riv7u-ldg7t-fxz3z-vae
+      stake: 33_333 tokens
+      memo: 42
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor2 43-45
+    - principal: dmkqr-cek4q-bhj3m-tu3jk-7xfc2-o6wcs-5prz7-v3i5l-tyudy-ycsoe-rae
+      stake: 45_000 tokens
+      memo: 43
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: dmkqr-cek4q-bhj3m-tu3jk-7xfc2-o6wcs-5prz7-v3i5l-tyudy-ycsoe-rae
+      stake: 45_000 tokens
+      memo: 44
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: dmkqr-cek4q-bhj3m-tu3jk-7xfc2-o6wcs-5prz7-v3i5l-tyudy-ycsoe-rae
+      stake: 45_000 tokens
+      memo: 45
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor3 46-48
+    - principal: gxqiw-vjqwl-c7gke-y6vzh-y6lo2-shel7-6jzhx-2mdrw-tx3an-2fxwu-pae
+      stake: 66_667 tokens
+      memo: 46
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: gxqiw-vjqwl-c7gke-y6vzh-y6lo2-shel7-6jzhx-2mdrw-tx3an-2fxwu-pae
+      stake: 66_667 tokens
+      memo: 47
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: gxqiw-vjqwl-c7gke-y6vzh-y6lo2-shel7-6jzhx-2mdrw-tx3an-2fxwu-pae
+      stake: 66_666 tokens
+      memo: 48
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor4 49-51
+    - principal: k3fnk-sdqsg-5xumv-wzbak-lz77x-fiyuh-gni2g-ee6md-a7p4s-ix6so-fae
+      stake: 40_000 tokens
+      memo: 49
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: k3fnk-sdqsg-5xumv-wzbak-lz77x-fiyuh-gni2g-ee6md-a7p4s-ix6so-fae
+      stake: 40_000 tokens
+      memo: 50
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: k3fnk-sdqsg-5xumv-wzbak-lz77x-fiyuh-gni2g-ee6md-a7p4s-ix6so-fae
+      stake: 40_000 tokens
+      memo: 51
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor5 52-54
+    - principal: cnykz-tlrdy-yftjd-dd527-mhhwb-pz53i-j56ak-7aldn-s45kg-fz7xu-oqe
+      stake: 621_600 tokens
+      memo: 52
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: cnykz-tlrdy-yftjd-dd527-mhhwb-pz53i-j56ak-7aldn-s45kg-fz7xu-oqe
+      stake: 621_600 tokens
+      memo: 53
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: cnykz-tlrdy-yftjd-dd527-mhhwb-pz53i-j56ak-7aldn-s45kg-fz7xu-oqe
+      stake: 621_600 tokens
+      memo: 54
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor6 55-57
+    - principal: 7wgus-w2zqd-xubpg-xraxq-jwf34-w3mgy-4xufv-7tdly-shgxy-g2ubb-pae
+      stake: 166_667 tokens
+      memo: 55
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: 7wgus-w2zqd-xubpg-xraxq-jwf34-w3mgy-4xufv-7tdly-shgxy-g2ubb-pae
+      stake: 166_667 tokens
+      memo: 56
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: 7wgus-w2zqd-xubpg-xraxq-jwf34-w3mgy-4xufv-7tdly-shgxy-g2ubb-pae
+      stake: 166_666 tokens
+      memo: 57
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor7 58-60
+    - principal: mmyfp-qjkbo-l2wag-egr4v-yaere-f55uo-gowtj-eassx-cxf4k-y3ly2-cqe
+      stake: 556_667 tokens
+      memo: 58
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: mmyfp-qjkbo-l2wag-egr4v-yaere-f55uo-gowtj-eassx-cxf4k-y3ly2-cqe
+      stake: 556_667 tokens
+      memo: 59
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: mmyfp-qjkbo-l2wag-egr4v-yaere-f55uo-gowtj-eassx-cxf4k-y3ly2-cqe
+      stake: 556_666 tokens
+      memo: 60
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor8 61-63
+    - principal: nvyum-76ood-2esqc-owgdf-5ddjt-pyku6-cexmj-2ynp7-byfxk-xip6r-3ae
+      stake: 933_334 tokens
+      memo: 61
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: nvyum-76ood-2esqc-owgdf-5ddjt-pyku6-cexmj-2ynp7-byfxk-xip6r-3ae
+      stake: 933_333 tokens
+      memo: 62
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: nvyum-76ood-2esqc-owgdf-5ddjt-pyku6-cexmj-2ynp7-byfxk-xip6r-3ae
+      stake: 933_333 tokens
+      memo: 63
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor9 64-66
+    - principal: sce33-lenq2-5hoas-gwqkp-ldsqa-7owy2-kxejt-kmx6g-rlez7-fjgmw-5qe
+      stake: 500_000 tokens
+      memo: 64
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: sce33-lenq2-5hoas-gwqkp-ldsqa-7owy2-kxejt-kmx6g-rlez7-fjgmw-5qe
+      stake: 500_000 tokens
+      memo: 65
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: sce33-lenq2-5hoas-gwqkp-ldsqa-7owy2-kxejt-kmx6g-rlez7-fjgmw-5qe
+      stake: 500_000 tokens
+      memo: 66
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor10 67-69
+    - principal: vghs6-go27c-jd3ev-dgczv-e673r-jgxon-zwkkg-stlky-b2hhz-ittgh-5qe
+      stake: 333_334 tokens
+      memo: 67
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: vghs6-go27c-jd3ev-dgczv-e673r-jgxon-zwkkg-stlky-b2hhz-ittgh-5qe
+      stake: 333_333 tokens
+      memo: 68
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: vghs6-go27c-jd3ev-dgczv-e673r-jgxon-zwkkg-stlky-b2hhz-ittgh-5qe
+      stake: 333_333 tokens
+      memo: 69
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor11 70-72
+    - principal: wynad-oidky-2uthg-td7dx-54dwn-ghd7s-z4j4a-tnnnu-zskmb-deik2-3ae
+      stake: 233_334 tokens
+      memo: 70
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: wynad-oidky-2uthg-td7dx-54dwn-ghd7s-z4j4a-tnnnu-zskmb-deik2-3ae
+      stake: 233_333 tokens
+      memo: 71
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: wynad-oidky-2uthg-td7dx-54dwn-ghd7s-z4j4a-tnnnu-zskmb-deik2-3ae
+      stake: 233_333 tokens
+      memo: 72
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+    # early investor12 73-75
+    - principal: cpb7n-lxzuf-vi6z7-cyhth-m3h6l-f6rq5-tk246-ekijy-wdrts-g3llr-oqe
+      stake: 1_370_067 tokens
+      memo: 73
+      dissolve_delay: 0 months
+      vesting_period: 0 months
+    - principal: cpb7n-lxzuf-vi6z7-cyhth-m3h6l-f6rq5-tk246-ekijy-wdrts-g3llr-oqe
+      stake: 1_370_067 tokens
+      memo: 74
+      dissolve_delay: 3 months
+      vesting_period: 0 months
+    - principal: cpb7n-lxzuf-vi6z7-cyhth-m3h6l-f6rq5-tk246-ekijy-wdrts-g3llr-oqe
+      stake: 1_370_066 tokens
+      memo: 75
+      dissolve_delay: 6 months
+      vesting_period: 0 months
+
   # The initial SNS token balances of the various canisters of the SNS.
   InitialBalances:
     # The initial SNS token balance of the SNS Governance canister is known
@@ -445,7 +873,7 @@ Swap:
     # many neurons will be in each participant's neuron basket. Note that
     # the first neuron in each neuron basket will have zero dissolve delay.
     # This value should thus be greater than or equal to `2`.
-    events: 3
+    events: 5
 
     # The interval at which the schedule will be increased per event. The
     # first neuron in the basket will be unlocked with zero dissolve delay.
