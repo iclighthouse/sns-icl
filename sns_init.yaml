@@ -358,7 +358,7 @@ Distribution:
     # For testing, propose_sns.sh will fill this in automatically.
 
     # =======team 0-9=======
-    - principal: w6uxv-phwzk-nyfuk-e2s4f-lxot4-fysux-qif6a-kd6m2-mxidg-5qmk7-eae
+    - principal: ljjik-rznyy-xlero-b4r4e-nxk4y-sylsr-lf3er-dcybt-zelc2-hfuum-tqe
       stake: 1_000 tokens
       memo: 0
       dissolve_delay: 3 months
