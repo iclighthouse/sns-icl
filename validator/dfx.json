@@ -1,0 +1,15 @@
+{
+	"canisters": {
+		"ICDexValidator": {
+			"main": "src/ICDexValidator.mo",
+			"type": "motoko",
+			"args": "--compacting-gc"
+		}
+	},
+	"defaults": {
+		"build": {
+			"packtool": "vessel sources"
+		}
+	},
+	"version": 1
+}
