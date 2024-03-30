@@ -44,6 +44,7 @@
 | 57          | 1038                        | Clear logs of transaction orders and  transaction tasks.     | pair_ictcClearLog      |
 | 58          | 1039                        | Try the task again.                                          | pair_ictcRedoTT        |
 | 59          | 1040                        | Complete a blocking order.                                   | pair_ictcCompleteTO    |
+| 82          | 1053                        | Placing an order in  a trading pair as a trader.             | sys_order              |
 
 ## Trader Canister Methods
 
