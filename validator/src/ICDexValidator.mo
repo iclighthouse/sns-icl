@@ -315,12 +315,25 @@ shared (msg) actor class ICDexValidator() {
 		);
 	};
 
+	public query func validatorPairIctcDoneTO(
+		_app : Principal,
+		_toid : Nat,
+		_status : SagaTM.OrderStatus,
+		_toCallback : Bool,
+	) : async ValidatorResult {
+		#Ok(debug_show (_app : Principal, _toid : Nat, _status : SagaTM.OrderStatus, _toCallback : Bool));
+	};
+
 	public query func validatorPairIctcRunTO(_app : Principal, _toid : Nat) : async ValidatorResult {
 		#Ok(debug_show (_app : Principal, _toid : Nat));
 	};
 
 	public query func validatorPairIctcBlockTO(_app : Principal, _toid : Nat) : async ValidatorResult {
 		#Ok(debug_show (_app : Principal, _toid : Nat));
+	};
+
+	public query func validatorPairSync(_app : Principal) : async ValidatorResult {
+		#Ok(debug_show (_app : Principal));
 	};
 
 	public query func validatorPairSetVipMaker(

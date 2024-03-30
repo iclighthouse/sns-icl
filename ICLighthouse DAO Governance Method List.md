@@ -1,8 +1,10 @@
-# ICLighthouse DAO Governance Method List
+# ICLighthouse DAO Governance Methods List
 
-## ICDexRouter Canister Method
+## ICDexRouter Canister Methods
 
-| Proposal Id | Nervous System Function  id | Description                                                  | Method Name            |
+**Canister ID: i5jcx-ziaaa-aaaar-qaazq-cai**
+
+| Proposal Id | Nervous System Function  id | Description                                                  | Methods Name           |
 | ----------- | --------------------------- | ------------------------------------------------------------ | ---------------------- |
 | 4           | 1000                        | Configure the system parameters of the ICDexRouter.          | sys_config             |
 | 5           | 1001                        | Set the wasm of the ICDexPair.                               | setICDexPairWasm       |
@@ -43,16 +45,23 @@
 | 58          | 1039                        | Try the task again.                                          | pair_ictcRedoTT        |
 | 59          | 1040                        | Complete a blocking order.                                   | pair_ictcCompleteTO    |
 
-## Trader Canister Method
+## Trader Canister Methods
 
-| Proposal Id | NervousSystemFunction  id | Description                                                  | Method Name  |
-| ----------- | ------------------------- | ------------------------------------------------------------ | ------------ |
-| 23          | 1014                      | Withdrawing funds from Trader to SNS Treasury.               | withdraw     |
-| 61          | 1041                      | Add a whitelist  trading pair (only these pairs are allowed to be traded). | setWhitelist |
+- Liquidity Trader Canister Methods
 
-## Asset Canister Method
+  | Proposal Id | NervousSystemFunction  id | Description                                    | Methods Name |
+  | ----------- | ------------------------- | ---------------------------------------------- | ------------ |
+  | 23          | 1014                      | Withdrawing funds from Trader to SNS Treasury. | withdraw     |
 
-| Proposal Id | NervousSystemFunction  id | Description                                             | Method Name           |
+- Conversion Trader Canister Methods
+
+  | Proposal Id | NervousSystemFunction  id | Description                                                  | Methods Name |
+  | ----------- | ------------------------- | ------------------------------------------------------------ | ------------ |
+  | 61          | 1041                      | Add a whitelist  trading pair (only these pairs are allowed to be traded). | setWhitelist |
+
+## Asset Canister Methods
+
+| Proposal Id | NervousSystemFunction  id | Description                                             | Methods Name          |
 | ----------- | ------------------------- | ------------------------------------------------------- | --------------------- |
 | 22          | 1013                      | Add frontend governance method `commit_proposed_batch`. | commit_proposed_batch |
 | 70          | 1042                      | Add asset canister permission                           | grant_permission      |
