@@ -686,6 +686,14 @@ shared (msg) actor class ICDexValidator() {
 		#Ok(debug_show (_intervalSeconds : Nat));
 	};
 
+	public query func validatorSysConversionFees(_args : [{ pair : Principal; debitToken : ?{ #token0; #token1 }; approvalSupported : ?Bool }]) : async ValidatorResult {
+		#Ok(debug_show (_args : [{ pair : Principal; debitToken : ?{ #token0; #token1 }; approvalSupported : ?Bool }]));
+	};
+
+	public query func validatorSysCall(_canisterId : Principal, _methodName : Text, _args : Blob) : async ValidatorResult {
+		#Ok(debug_show (_canisterId : Principal, _methodName : Text, _args : Blob));
+	};
+
 	/// Trader Validator
 
 	public query func validatorTraderWithdraw(
