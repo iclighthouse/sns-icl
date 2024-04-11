@@ -26,8 +26,6 @@ shared (msg) actor class ICDexValidator() {
 	};
 
 	private stable var owner = msg.caller;
-	private stable let blackhole = Principal.fromText("7hdtw-jqaaa-aaaak-aaccq-cai");
-	private stable var icRouter : Text = "i5jcx-ziaaa-aaaar-qaazq-cai";
 
 	private func onlyOwner(caller : Principal) : Bool {
 		if (caller == owner) {
@@ -35,12 +33,6 @@ shared (msg) actor class ICDexValidator() {
 		};
 		return false;
 	};
-
-	public type Router = actor {
-		getDAO : shared query () -> async Principal;
-	};
-
-	private let router : Router = actor (icRouter);
 
 	public shared (msg) func modifyOwner(o : Principal) {
 		assert (onlyOwner(msg.caller));
@@ -422,8 +414,6 @@ shared (msg) actor class ICDexValidator() {
 		_to : { owner : Principal; subaccount : ?Blob },
 		_value : Nat,
 	) : async ValidatorResult {
-		let icDao = await router.getDAO();
-		assert (_to.owner == icDao or _to.owner == blackhole);
 		#Ok(
 			debug_show (
 				_token : Principal,
@@ -712,6 +702,11 @@ shared (msg) actor class ICDexValidator() {
 
 	public query func validatorTraderSetWhitelist(_pair : Principal) : async ValidatorResult {
 		#Ok(debug_show (_pair : Principal));
+	};
+
+	/// Common
+	public query func validator() : async ValidatorResult {
+		#Ok(debug_show ());
 	};
 
 };
