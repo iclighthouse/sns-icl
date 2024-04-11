@@ -44,6 +44,18 @@
 | 57          | 1038                        | Clear logs of transaction orders and  transaction tasks.     | pair_ictcClearLog       |
 | 58          | 1039                        | Try the task again.                                          | pair_ictcRedoTT         |
 | 59          | 1040                        | Complete a blocking order.                                   | pair_ictcCompleteTO     |
+| 61          | 1041                        | Add a whitelist  trading pair (only these pairs are allowed to be traded) | setWhitelist            |
+| 70          | 1042                        | Add asset canister permission                                | grant_permission        |
+| 72          | 1043                        | Set status of a pending task.                                | pair_ictcDoneTT         |
+| 73          | 1044                        | Set status of a pending order.                               | pair_ictcDoneTO         |
+| 74          | 1045                        | Run the ICTC actuator and check the  status of the transaction order `toid`. | pair_ictcRunTO          |
+| 75          | 1046                        | Change the status of a transaction order  to #Blocking.      | pair_ictcBlockTO        |
+| 76          | 1047                        | Synchronizing token0 and token1 transfer  fees.              | pair_sync               |
+| 77          | 1048                        | Removes vip-maker qualification.                             | pair_removeVipMaker     |
+| 78          | 1049                        | Retrieve missing funds from the order's  TxAccount. The funds of the TxAccount will be refunded to the ICDexRouter  canister-id. | pair_fallbackByTxid     |
+| 79          | 1050                        | Cancels an order.                                            | pair_cancelByTxid       |
+| 80          | 1051                        | Submit a text description of the Trading  Ambassadors (referral) system. | pair_taSetDescription   |
+| 81          | 1052                        | Withdraw the token to the specified  account.Withdrawals can only be made to a DAO address, or to a blackhole  address (destruction), not to a private address. | sys_withdraw            |
 | 82          | 1053                        | Placing an order in  a trading pair as a trader.             | sys_order               |
 | 90          | 1054                        | Cancel own orders  as a trader.                              | sys_cancelOrder         |
 | 91          | 1055                        | Reinstall an ICDexMaker canister which is  paused.Note: Operate with caution. Consider calling this method only if  upgrading is not possible. | maker_reinstall         |
