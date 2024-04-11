@@ -76,5 +76,5 @@
 
 | Proposal Id | NervousSystemFunction  id | Description                                             | Methods Name          |
 | ----------- | ------------------------- | ------------------------------------------------------- | --------------------- |
-| 22          | 1013                      | Add frontend governance method `commit_proposed_batch`. | commit_proposed_batch |
+| 120         | 1066                      | Add frontend governance method `commit_proposed_batch`. | commit_proposed_batch |
 | 70          | 1042                      | Add asset canister permission                           | grant_permission      |
