@@ -684,6 +684,18 @@ shared (msg) actor class ICDexValidator() {
 		#Ok(debug_show (_canisterId : Principal, _methodName : Text, _args : Blob));
 	};
 
+	public query func validatorSync() : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
+	public query func validatorDebugMonitor() : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
+	public query func validatorTimerStop() : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
 	/// Trader Validator
 
 	public query func validatorTraderWithdraw(
@@ -702,11 +714,6 @@ shared (msg) actor class ICDexValidator() {
 
 	public query func validatorTraderSetWhitelist(_pair : Principal) : async ValidatorResult {
 		#Ok(debug_show (_pair : Principal));
-	};
-
-	/// Common
-	public query func validator() : async ValidatorResult {
-		#Ok(debug_show ());
 	};
 
 };

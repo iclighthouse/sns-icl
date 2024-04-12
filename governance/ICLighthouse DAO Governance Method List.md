@@ -69,10 +69,21 @@
 | 99          | 1063                        | Creates a grid order for Automated Market  Maker (ICDexMaker) on the trading pair. | maker_createGridOrder   |
 | 111         | 1064                        | Batch conversion of  fees in ICDexRouter.                    | sys_conversionFees      |
 | 112         | 1065                        | Calls specified  canister's methods, such as trading pairs, using ICDexRouter as a proxy for  governance purposes. This is a generic ICDex governance method with the  disadvantage that the parameters are in binary unreadable form. Proposals that call this method, where its  parameters are not clear, please vote to reject. | sys_call                |
+| 120         | 1066                        | Add frontend  governance method commit_proposed_batch        | commit_proposed_batch   |
+| 131         | 1067                        | Cancels trade orders in pending on the  trading pair placed by Automated Market Maker (ICDexMaker). | maker_cancelAllOrders   |
+| 132         | 1068                        | Put a canister-id into Cycles Monitor.                       | monitor_put             |
+| 133         | 1069                        | Remove a canister-id from Cycles Monitor.                    | monitor_remove          |
+| 134         | 1070                        | Returns a canister's caniter_status  information.            | debug_canister_status   |
+| 135         | 1071                        | Start the Timer, it will be started  automatically when upgrading the canister. | timerStart              |
+| 140         | 1072                        | Synchronize trading fees for all pairs.                      | sync                    |
+| 141         | 1073                        | Perform a monitoring. Typically,  monitoring is implemented in a timer. | debug_monitor           |
+| 142         | 1074                        | Stop the Timer                                               | timerStop               |
 
 ## Trader Canister Methods
 
 - Liquidity Trader Canister Methods
+
+  **Canister ID: 3yss5-5qaaa-aaaar-qad7a-cai**
 
   | Proposal Id | NervousSystemFunction  id | Description                                    | Methods Name |
   | ----------- | ------------------------- | ---------------------------------------------- | ------------ |
@@ -80,11 +91,15 @@
 
 - Conversion Trader Canister Methods
 
+  **Canister ID: 3jd4g-jyaaa-aaaar-qaeba-cai**
+  
   | Proposal Id | NervousSystemFunction  id | Description                                                  | Methods Name |
   | ----------- | ------------------------- | ------------------------------------------------------------ | ------------ |
   | 61          | 1041                      | Add a whitelist  trading pair (only these pairs are allowed to be traded). | setWhitelist |
 
 ## Asset Canister Methods
+
+**Canister ID: 7vkf4-jqaaa-aaaaj-azrua-cai**
 
 | Proposal Id | NervousSystemFunction  id | Description                                             | Methods Name          |
 | ----------- | ------------------------- | ------------------------------------------------------- | --------------------- |
