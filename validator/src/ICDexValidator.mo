@@ -700,6 +700,10 @@ shared (msg) actor class ICDexValidator() {
 		#Ok(debug_show ());
 	};
 
+	public query func validatorSyncVipMakers() : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
 	/// Trader Validator
 
 	public query func validatorTraderWithdraw(
