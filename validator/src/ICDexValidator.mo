@@ -10,6 +10,8 @@ import DRC205 "mo:icl/DRC205";
 import SagaTM "./ICTC/SagaTM";
 import Maker "mo:icl/ICDexMaker";
 import ICRC1 "mo:icl/ICRC1";
+import Sha256 "mo:sha2/Sha256";
+import Hex "mo:icl/Hex";
 
 shared (msg) actor class ICDexValidator() {
 
@@ -50,9 +52,10 @@ shared (msg) actor class ICDexValidator() {
 		_version : Text,
 		_multiChunk : ?{ #first; #middle; #final },
 	) : async ValidatorResult {
+		let module_hash = Sha256.fromBlob(#sha256, _wasm);
 		#Ok(
 			debug_show (
-				_wasm : Blob,
+				Hex.encode(Blob.toArray(module_hash)) : Text,
 				_version : Text,
 				_multiChunk : ?{ #first; #middle; #final },
 			)
@@ -64,9 +67,10 @@ shared (msg) actor class ICDexValidator() {
 		_version : Text,
 		_multiChunk : ?{ #first; #middle; #final },
 	) : async ValidatorResult {
+		let module_hash = Sha256.fromBlob(#sha256, _wasm);
 		#Ok(
 			debug_show (
-				_wasm : Blob,
+				Hex.encode(Blob.toArray(module_hash)) : Text,
 				_version : Text,
 				_multiChunk : ?{ #first; #middle; #final },
 			)

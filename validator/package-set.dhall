@@ -8,9 +8,9 @@ let upstream =
   , version = "8e942b3d724099e4a47f5cc7ce13ae0bfd575a28" -- updated to mo-0.10.3
   }
 , { dependencies = [ "base" ]
-  , name = "sha256"
-  , repo = "https://github.com/enzoh/motoko-sha.git"
-  , version = "9e2468f51ef060ae04fde8d573183191bda30189"
+  , name = "sha2"
+  , repo = "https://github.com/research-ag/sha2"
+  , version = "d2926348ab29d8548127e2cba3b4247270a530e0"
   }
 , { dependencies = [ "base" ]
   , name = "sha224"
