@@ -733,8 +733,8 @@ shared (msg) actor class ICDexValidator() {
 	public query func validatorTraderSetWhitelist(_pair : Principal) : async ValidatorResult {
 		#Ok(debug_show (_pair : Principal));
 	};
-
-	// ICLMining
+ 
+	// ICLMining Validator Method
 	public query func validatorMiningNewRound(_config : RoundConfig) : async ValidatorResult {
 		#Ok(debug_show (_config : RoundConfig));
 	};
