@@ -26,6 +26,16 @@ shared (msg) actor class ICDexValidator() {
 		#Ok : Text;
 		#Err : Text;
 	};
+	type RoundConfig = {
+		pairs : { #whitelist : [Principal]; #all };
+		pairFilter : { minPairScore : Nat; blackList : [Principal] };
+		content : Text;
+		startTime : Timestamp; // 0 means from the end of the previous round
+		endTime : Timestamp;
+		supplyForTM : Nat;
+		supplyForLM : Nat;
+		preMiningDataFactorPercent : Nat; // 50 means 50%. When startTime > 0, the weight factor of the mining data between the endTime of the previous round and the startTime of this round.
+	};
 
 	private stable var owner = msg.caller;
 
@@ -722,6 +732,44 @@ shared (msg) actor class ICDexValidator() {
 
 	public query func validatorTraderSetWhitelist(_pair : Principal) : async ValidatorResult {
 		#Ok(debug_show (_pair : Principal));
+	};
+
+	// ICLMining
+	public query func validatorMiningNewRound(_config : RoundConfig) : async ValidatorResult {
+		#Ok(debug_show (_config : RoundConfig));
+	};
+
+	public query func validatorMiningUpdateRound(
+		_roundId : Nat,
+		_args : {
+			pairs : ?{ #whitelist : [Principal]; #all };
+			pairFilter : ?{ minPairScore : Nat; blackList : [Principal] };
+			content : ?Text;
+			startTime : ?Timestamp; // 0 means from the end of the previous round
+			endTime : ?Timestamp;
+			supplyForTM : ?Nat;
+			supplyForLM : ?Nat;
+			preMiningDataFactorPercent : ?Nat;
+		},
+	) : async ValidatorResult {
+		#Ok(
+			debug_show (
+				_roundId : Nat,
+				_args : {
+					pairs : ?{ #whitelist : [Principal]; #all };
+					pairFilter : ?{
+						minPairScore : Nat;
+						blackList : [Principal];
+					};
+					content : ?Text;
+					startTime : ?Timestamp; // 0 means from the end of the previous round
+					endTime : ?Timestamp;
+					supplyForTM : ?Nat;
+					supplyForLM : ?Nat;
+					preMiningDataFactorPercent : ?Nat;
+				},
+			)
+		);
 	};
 
 };
