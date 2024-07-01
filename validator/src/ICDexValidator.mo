@@ -774,4 +774,102 @@ shared (msg) actor class ICDexValidator() {
 		);
 	};
 
+	// DexAggregator
+	public type DexName = Text;
+	public type PairCanister = Principal;
+
+	public type TokenInfo = (Principal, Text, TokenStd);
+	public type PairInfo = {
+		token0 : TokenInfo;
+		token1 : TokenInfo;
+		dexName : DexName;
+		canisterId : PairCanister;
+		feeRate : Float;
+	};
+
+	public type ConfigRequest = {
+		SYS_TOKEN : ?Principal;
+		BLACKHOLE : ?Principal;
+		ORACLE : ?Principal;
+		SCORE_G1 : ?Nat; // 60
+		SCORE_G2 : ?Nat; // 50
+		SCORE_G3 : ?Nat; // 30
+		SCORE_G4 : ?Nat; // 20
+	};
+	public query func dexAggrSyncAllTokenFee() : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
+	public query func dexAggrPutTradingPair(_pair : PairInfo, _score : Nat) : async ValidatorResult {
+		#Ok(debug_show (_pair : PairInfo, _score : Nat));
+	};
+
+	public query func dexAggrRemoveTradingPair(_pairCanister : PairCanister) : async ValidatorResult {
+		#Ok(debug_show (_pairCanister : PairCanister));
+	};
+
+	public query func dexAggrSetScore(_pairId : Principal, _score : Nat) : async ValidatorResult {
+		#Ok(debug_show (_pairId : Principal, _score : Nat));
+	};
+
+	public query func dexAggrPutCurrency(_cur : TokenInfo) : async ValidatorResult {
+		#Ok(debug_show (_cur : TokenInfo));
+	};
+
+	public query func dexAggrRemoveCurrency(_curToken : Principal) : async ValidatorResult {
+		#Ok(debug_show (_curToken : Principal));
+	};
+
+	public query func dexAggrSetDex(_name : DexName, _canisterId : Principal) : async ValidatorResult {
+		#Ok(debug_show (_name : DexName, _canisterId : Principal));
+	};
+
+	public query func dexAggrDelDex(_canisterId : Principal) : async ValidatorResult {
+		#Ok(debug_show (_canisterId : Principal));
+	};
+
+	public query func dexAggrPutPairToMarket(_market : Text, _pairCanisterId : PairCanister) : async ValidatorResult {
+		#Ok(debug_show (_market : Text, _pairCanisterId : PairCanister));
+	};
+
+	public query func dexAggrRemovePairFromMarket(_market : ?Text, _pairCanisterId : PairCanister) : async ValidatorResult {
+		#Ok(debug_show (_market : ?Text, _pairCanisterId : PairCanister));
+	};
+
+	public query func dexAggrAddTokenMetadata(_token : Principal, _metadatas : [(_name : Text, _value : Text)]) : async ValidatorResult {
+		#Ok(debug_show (_token : Principal, _metadatas : [(_name : Text, _value : Text)]));
+	};
+
+	public query func dexAggrRemoveTokenMetadata(_token : Principal, _name : ?Text) : async ValidatorResult {
+		#Ok(debug_show (_token : Principal, _name : ?Text));
+	};
+
+	public query func dexAggrConfig(config : ConfigRequest, DAO : ?Principal, DAO_BOARD : ?Principal) : async ValidatorResult {
+		#Ok(debug_show (config : ConfigRequest, DAO : ?Principal, DAO_BOARD : ?Principal));
+	};
+
+	public query func dexAggrSysWithdraw(_token : Principal, _tokenStd : TokenStd, _to : Principal, _value : Nat) : async ValidatorResult {
+		#Ok(debug_show (_token : Principal, _tokenStd : TokenStd, _to : Principal, _value : Nat));
+	};
+
+	public query func dexAggrSysBurn(_value : Nat) : async ValidatorResult {
+		#Ok(debug_show (_value : Nat));
+	};
+
+	public query func dexAggrVerifyListingReferrer(_referrer : Principal, _name : Text, _verified : Bool) : async ValidatorResult {
+		#Ok(debug_show (_referrer : Principal, _name : Text, _verified : Bool));
+	};
+
+	public query func dexAggrDropListingReferrer(_referrer : Principal) : async ValidatorResult {
+		#Ok(debug_show (_referrer : Principal));
+	};
+
+	public query func dexAggrPropose(_pair : PairCanister) : async ValidatorResult {
+		#Ok(debug_show (_pair : PairCanister));
+	};
+
+	public query func dexAggrMngNFTUnStake(_accountId : AccountId, _permissionName : Text) : async ValidatorResult {
+		#Ok(debug_show (_accountId : AccountId, _permissionName : Text));
+	};
+
 };
