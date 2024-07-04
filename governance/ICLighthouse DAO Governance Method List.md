@@ -78,6 +78,33 @@
 | 140         | 1072                        | Synchronize trading fees for all pairs.                      | sync                    |
 | 141         | 1073                        | Perform a monitoring. Typically,  monitoring is implemented in a timer. | debug_monitor           |
 | 142         | 1074                        | Stop the Timer                                               | timerStop               |
+| 153         | 1075                        | Add governance  method `ICDexRouter.syncVipMakers()`         | syncVipMakers           |
+
+## DexAggregator Canister Methods
+
+**Canister ID: i2ied-uqaaa-aaaar-qaaza-cai**
+
+| Proposal Id | NervousSystemFunction  id | Description                                             | Methods Name                 |
+| ----------- | ------------------------- | ------------------------------------------------------- | ---------------------------- |
+| 257         | 1078                      | Add governance  method `DexAggr.syncAllTokenFee()`      | DexAggr.syncAllTokenFee      |
+| 258         | 1079                      | Add governance  method `DexAggr.putTradingPair()`       | DexAggr.putTradingPair       |
+| 259         | 1080                      | Add governance  method `DexAggr.removeTradingPair()`    | DexAggr.removeTradingPair    |
+| 260         | 1081                      | Add governance method  `DexAggr.setScore()`             | DexAggr.setScore             |
+| 261         | 1082                      | Add governance method  `DexAggr.putCurrencyToken()`     | DexAggr.putCurrencyToken     |
+| 262         | 1083                      | Add governance method  `DexAggr.removeCurrencyToken()`  | DexAggr.putCurrencyToken     |
+| 263         | 1084                      | Add governance method `DexAggr.setDex()`                | DexAggr.setDex               |
+| 264         | 1085                      | Add governance method `DexAggr.delDex()`                | DexAggr.delDex               |
+| 265         | 1086                      | Add governance method  `DexAggr.putPairToMarket()`      | DexAggr.putPairToMarket      |
+| 266         | 1087                      | Add governance method  `DexAggr.removePairFromMarket()` | DexAggr.removePairFromMarket |
+| 267         | 1088                      | Add governance method  `DexAggr.addTokenMetadata()`     | DexAggr.addTokenMetadata     |
+| 268         | 1089                      | Add governance method  `DexAggr.removeTokenMetadata()`  | DexAggr.removeTokenMetadata  |
+| 269         | 1090                      | Add governance method `DexAggr.config()`                | DexAggr.config               |
+| 270         | 1091                      | Add governance method  `DexAggr.sysWithdraw()`          | DexAggr.sysWithdraw          |
+| 271         | 1092                      | Add governance method `DexAggr.sysBurn()`               | DexAggr.sysBurn              |
+| 274         | 1093                      | Add governance method  `DexAggr.verifyListingReferre()` | DexAggr.verifyListingReferre |
+| 275         | 1094                      | Add governance method  `DexAggr.dropListingReferrer()`  | DexAggr.dropListingReferrer  |
+| 276         | 1095                      | Add governance method `DexAggr.propose:  propose()`     | DexAggr.propose:  propose    |
+| 277         | 1096                      | Add governance method  `DexAggr.mngNFTUnStake()`        | DexAggr.mngNFTUnStake        |
 
 ## Trader Canister Methods
 
@@ -96,6 +123,14 @@
   | Proposal Id | NervousSystemFunction  id | Description                                                  | Methods Name |
   | ----------- | ------------------------- | ------------------------------------------------------------ | ------------ |
   | 61          | 1041                      | Add a whitelist  trading pair (only these pairs are allowed to be traded). | setWhitelist |
+
+## ICLMining Canister Methods
+
+**Canister ID: odhfn-cqaaa-aaaar-qaana-cai**
+
+| Proposal Id | NervousSystemFunction  id | Description                                                  | Methods Name    |
+| ----------- | ------------------------- | ------------------------------------------------------------ | --------------- |
+| 169         | 1076                      | Add governance method  `ICLMining.newRound()`Add asset canister permission | Mining.newRound |
 
 ## Asset Canister Methods
 

@@ -3,7 +3,8 @@
 		"ICDexValidator": {
 			"main": "src/ICDexValidator.mo",
 			"type": "motoko",
-			"args": "--compacting-gc"
+			"args": "--compacting-gc",
+			"gzip": true
 		}
 	},
 	"defaults": {
