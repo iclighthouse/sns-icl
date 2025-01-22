@@ -872,4 +872,12 @@ shared (msg) actor class ICDexValidator() {
 		#Ok(debug_show (_accountId : AccountId, _permissionName : Text));
 	};
 
+	public query func validatorMonitorIcpToCycles(_icp_e8s : Nat) : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
+	public query func validatorMonitorSendCycles(_canister_id : Principal, _cycles : Nat) : async ValidatorResult {
+		#Ok(debug_show ());
+	};
+
 };
