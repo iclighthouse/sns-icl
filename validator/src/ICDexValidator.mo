@@ -13,7 +13,7 @@ import ICRC1 "mo:icl/ICRC1";
 import Sha256 "mo:sha2/Sha256";
 import Hex "mo:icl/Hex";
 
-shared (msg) actor class ICDexValidator() {
+shared (msg) persistent actor class ICDexValidator() {
 
 	type Timestamp = ICDexTypes.Timestamp;
 	type DexConfig = ICDexTypes.DexConfig;
@@ -734,6 +734,18 @@ shared (msg) actor class ICDexValidator() {
 
 	public query func validatorTraderSetWhitelist(_pair : Principal) : async ValidatorResult {
 		#Ok(debug_show (_pair : Principal));
+	};
+
+	public query func validatorTraderRemoveWhitelist(_pair : Principal):async ValidatorResult {
+		#Ok(debug_show (_pair : Principal));
+	};
+
+	public query func validatorTraderSetOperator(_operator: Principal):async ValidatorResult {
+		#Ok(debug_show (_operator : Principal));
+	};
+
+	public query func validatorTraderRemoveOperator(_operator: Principal):async ValidatorResult {
+		#Ok(debug_show (_operator : Principal));
 	};
 
 	// ICLMining Validator Method
